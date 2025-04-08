@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わんわんマッチング</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>わんわんマッチング</h1>
+            <div class="game-info">
+                <div class="score">スコア: <span id="score">0</span></div>
+                <div class="time">残り時間: <span id="time">60</span>秒</div>
+                <div class="lives">ライフ: <span id="lives">3</span></div>
+                <div class="level">レベル: <span id="level">1</span></div>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <div class="map-area" id="map-container">
+                <!-- 犬と飼い主キャラクターがここに動的に追加されます -->
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="start-button">ゲームスタート</button>
+            <button id="next-level" disabled>次のレベル</button>
+        </div>
+
+        <div id="game-message" class="game-message"></div>
+
+        <div id="game-over" class="modal">
+            <div class="modal-content">
+                <h2>ゲームオーバー</h2>
+                <p>最終スコア: <span id="final-score">0</span></p>
+                <p>最高レベル: <span id="final-level">1</span></p>
+                <button id="restart-button">もう一度プレイ</button>
+            </div>
+        </div>
+
+        <div id="level-complete" class="modal">
+            <div class="modal-content">
+                <h2>レベルクリア！</h2>
+                <p>獲得スコア: <span id="level-score">0</span></p>
+                <button id="next-level-button">次のレベルへ</button>
+            </div>
+        </div>
+
+        <div id="tutorial" class="modal">
+            <div class="modal-content">
+                <h2>遊び方</h2>
+                <p>マップ上に犬と飼い主がランダムに配置されています。</p>
+                <p><strong>操作方法：</strong></p>
+                <p>1. まず犬をタップ（クリック）して選択します</p>
+                <p>2. 次に正しい飼い主をタップ（クリック）してマッチングします</p>
+                <p>見た目や行動パターン、性格の特徴が似ている犬と飼い主を見つけましょう！</p>
+                <p><strong>ヒント：</strong> キャラクターにマウスを乗せると詳細情報が表示されます。</p>
+                <p>特徴、性格、行動パターンを手がかりにマッチングしてください。</p>
+                <p>正しい組み合わせでポイント獲得、間違えるとライフが減ります。</p>
+                <p>すべてのペアを見つけるとレベルクリアです！</p>
+                <button id="tutorial-close">ゲームスタート</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

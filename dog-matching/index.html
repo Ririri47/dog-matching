@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犬と飼い主マッチングゲーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- タイトル画面 -->
+    <div id="title-screen" class="screen active">
+        <div class="title-container">
+            <h1>犬と飼い主マッチングゲーム</h1>
+            <p class="title-description">飼い主と、イメージに合う犬種を線で結ぶゲームです。</p>
+            <button id="start-btn" class="start-btn">ゲームスタート</button>
+        </div>
+    </div>
+    
+    <!-- ゲーム画面 -->
+    <div id="game-screen" class="screen">
+        <div class="container">
+            <h1>犬と飼い主マッチングゲーム</h1>
+            <p class="instructions">飼い主と、イメージに合う犬種を線で結んでください。</p>
+            
+            <div class="game-area">
+                <div class="owners-container" id="owners-container">
+                    <!-- 飼い主の画像がここに表示されます -->
+                </div>
+                
+                <div class="canvas-container">
+                    <canvas id="connection-canvas"></canvas>
+                </div>
+                
+                <div class="dogs-container" id="dogs-container">
+                    <!-- 犬の画像がここに表示されます -->
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="score">スコア: <span id="score">0</span> / <span id="total">0</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- クリア画面 -->
+    <div id="clear-screen" class="screen">
+        <div class="clear-container">
+            <h1 class="clear-title">おめでとう！</h1>
+            <p class="clear-message">全ての組み合わせを正解しました！</p>
+            <button id="to-title-btn" class="to-title-btn">タイトルへ戻る</button>
+        </div>
+    </div>
+    
+    <div class="correct-feedback" id="correct-feedback">
+        <div class="correct-message">正解！</div>
+    </div>
+    
+    <div class="incorrect-feedback" id="incorrect-feedback">
+        <div class="incorrect-message">残念！</div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
